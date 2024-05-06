@@ -1,0 +1,55 @@
+{
+  "information": {
+    "id": "stable-diffusion-api",
+    "name": "Stable Diffusion API",
+    "description": "Generates images based on an input prompt using the Stability AI API. Input: api_key -> your Stability AI API key, prompt -> the input prompt. Output: output_img -> path to the generated image.",
+    "system_versions": [
+      "0.1"
+    ],
+    "block_version": "block version number",
+    "block_source": "core/blocks/stable-diffusion-api",
+    "block_type": "compute"
+  },
+  "inputs": {
+    "api_key": {
+      "type": "Any",
+      "connections": [],
+      "relays": []
+    },
+    "prompt": {
+      "type": "Any",
+      "connections": [],
+      "relays": []
+    }
+  },
+  "outputs": {
+    "output_img": {
+      "type": "file",
+      "connections": [],
+      "relays": []
+    }
+  },
+  "action": {
+    "container": {
+      "image": "stable-diffusion-api",
+      "version": "latest",
+      "command_line": [
+        "python",
+        "entrypoint.py"
+      ]
+    }
+  },
+  "views": {
+    "node": {
+      "behavior": "modal",
+      "active": "True or False",
+      "title_bar": {},
+      "preview": {},
+      "html": "",
+      "pos_x": 0,
+      "pos_y": 0,
+      "pos_z": "999"
+    }
+  },
+  "events": {}
+}
